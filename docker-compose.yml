@@ -14,8 +14,6 @@ services:
       - "80:8080"
     volumes:
       - exchange:/opt/tomcat/webapps
-    depend_on:
-      -maven
     
 volumes:
   exchange:
