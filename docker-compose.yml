@@ -6,9 +6,9 @@ services:
 
     image: einsteinlevel/maven:latest
     volumes:
-      -type:volume
-       source:exchange
-       target:/boxfuse-sample-java-war-hello/target
+      - type: volume
+        source: exchange
+        target: /boxfuse-sample-java-war-hello/target
 
   tomcat:
 
