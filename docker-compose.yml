@@ -1,4 +1,13 @@
 ---
-version: "3"
-service: 
-  
+version: "3.8"
+service:
+  maven:
+    image: einsteinlevel/maven:latest
+    links:
+      - tomcat
+
+  tomcat: 
+    image: einsteinlevel/alpine-tomcat9:tagname
+    port: 
+      - "80:8080"
+    
