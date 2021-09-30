@@ -3,16 +3,16 @@ services:
   maven:
     image: einsteinlevel/maven:latest
     volumes:
-      -type: volume
-      -source: exchange
-      -target: /boxfuse-sample-java-war-hello/target
+      -type: "volume"
+       source: exchange
+       target: /boxfuse-sample-java-war-hello/target
 
   tomcat: 
     image: einsteinlevel/alpine-tomcat9:tagname
     ports: 
       - "80:8080"
     volumes:
-      - exchange:/opt/tomcat/webapps
+      - "exchange:/opt/tomcat/webapps"
     
 volumes:
   exchange:
