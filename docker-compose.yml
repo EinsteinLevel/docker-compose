@@ -1,10 +1,9 @@
----
-version: 3.8
+version: '3.8'
 services:
   maven:
     image: einsteinlevel/maven:latest
     volumes:
-      -type: "volume"
+      -type: volume
       -source: exchange
       -target: /boxfuse-sample-java-war-hello/target
 
@@ -17,4 +16,3 @@ services:
     
 volumes:
   exchange:
----
