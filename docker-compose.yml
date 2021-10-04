@@ -8,17 +8,6 @@ services:
     volumes:
       - type: volume
         source: exchange
-        target: /boxfuse-sample-java-war-hello/target
-
-  tomcat:
-
-    image: einsteinlevel/alpine-tomcat9
-    ports: 
-      - "80:8080"
-    volumes:
-      - "exchange:/opt/tomcat/webapps"
-    depends_on:
-    - maven
-    
+        target: /boxfuse-sample-java-war-hello/target    
 volumes:
   exchange:
