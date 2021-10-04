@@ -6,6 +6,5 @@ services:
 
     image: einsteinlevel/maven:latest
     volumes:
-      - type: bind
-        source: ./artefact
-        target: /boxfuse-sample-java-war-hello/target
+      - ./artefact:/boxfuse-sample-java-war-hello/target
+
