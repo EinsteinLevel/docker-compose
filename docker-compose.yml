@@ -4,7 +4,7 @@ services:
 
   maven:
 
-    image: einsteinlevel/maven:latest
+    image: 178.154.200.52:8123/$ImageName:latest
     volumes:
       - type: volume
         source: exchange
