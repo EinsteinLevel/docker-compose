@@ -6,5 +6,17 @@ services:
 
     image: einsteinlevel/maven:latest
     volumes:
-      - ./artefact:/boxfuse-sample-java-war-hello/target
+      - type: volume
+        source: exchange
+        target: /boxfuse-sample-java-war-hello/target
 
+  tomcat:
+
+    image: einsteinlevel/alpine-tomcat9
+    ports: 
+      - "80:8080"
+    volumes:
+      - "exchange:/opt/tomcat/webapps"
+    
+volumes:
+  exchange:
